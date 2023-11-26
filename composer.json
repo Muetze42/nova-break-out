@@ -1,0 +1,20 @@
+{
+    "name": "norman-huth/nova-breack-out",
+    "description": "Use validation rules and other data from a Laravel Nova resource.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NormanHuth\\NovaBreakOut\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Norman Huth",
+            "homepage": "https://huth.it"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/nova": "^4.2"
+    }
+}
