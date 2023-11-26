@@ -82,7 +82,6 @@ class Resource
     {
         if (is_string($model)) {
             $model = new $model();
-            $this->novaRequest->query->set('resourceId', $model->getKey());
         }
 
         /* @var \Laravel\Nova\Resource $resource */
@@ -110,8 +109,8 @@ class Resource
     {
         if (is_string($model)) {
             $model = new $model();
-            $this->novaRequest->query->set('resourceId', $model->getKey());
         }
+        $this->novaRequest->query->set('resourceId', $model->getKey());
 
         /* @var \Laravel\Nova\Resource $resource */
         (new $resource($model))->authorizeToUpdate($this->novaRequest);
@@ -129,8 +128,8 @@ class Resource
     {
         if (is_string($model)) {
             $model = new $model();
-            $this->novaRequest->query->set('resourceId', $model->getKey());
         }
+        $this->novaRequest->query->set('resourceId', $model->getKey());
 
         /* @var \Laravel\Nova\Resource $resource */
         (new $resource($model))->authorizeToCreate($this->novaRequest);
@@ -162,8 +161,8 @@ class Resource
     {
         if (is_string($model)) {
             $model = new $model();
-            $this->novaRequest->query->set('resourceId', $model->getKey());
         }
+        $this->novaRequest->query->set('resourceId', $model->getKey());
 
         /* @var \Laravel\Nova\Resource $resource */
         (new $resource($model))->authorizeToViewAny($this->novaRequest);
